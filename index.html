@@ -1,0 +1,134 @@
+<html>
+<head>
+	<title>title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="site/css/style.css">
+	<link rel="stylesheet" type="text/css" href="site/css/style.css" media="screen">
+	<script type="text/javascript" src="site/js/script.js"></script>
+	<script type="text/javascript" src="site/js/jquery-min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="site/js/jquery.maskedinput.js"></script>
+	<script type="text/javascript" src="site/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script type="text/javascript" src="site/js/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$('#qwe123').mask('+7-(999)-999-99-99');
+		});
+	</script> 
+</head>
+<body>
+	<div class="wrapper">
+		<div id="modal">
+			<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+			<h1>Отправлено</h1>
+		</div>
+		<div id="header">
+			<div id="container">
+				<div id="logoandnav">
+					<div id="logo" class="unselectable cols col-4">avtodoktor-khimki</div>
+					<div class="unselectable cols col-8">
+						<ul id="nav">
+							<li onclick="gotoDiv(2)">ПРОЦЕСС РЕМОНТА</li>
+							<li onclick="gotoDiv(3)">КАК ПРОЕХАТЬ</li>
+							<li onclick="gotoDiv(4)">ЦЕНЫ</li>
+							<li onclick="gotoDiv(5)">КОНТАКТЫ</li>
+						</ul>
+					</div>
+				</div>
+				<div id="header-content" class="cols col-12">
+					<p id="remont">Ремонт сколов и трещин в лобовых стеклах</p> 
+				</div>
+				<div id="arrow" class="cols col-12" onclick="gotoDiv(2)">
+
+				</div>
+			</div>
+		</div>
+		<div id="secondDiv" class="row">
+			<h1 class="divHeader" class="cols col-12">Процесс ремонта</h1>
+			<div class="infoList">
+				<div class="listDiv">
+				<ol class="list">
+					<li>Осмотр и очищение поверхности скола или трещины от загрязнения и остатков стекла</li>
+					<li>Снятие внутреннего напряжения в центре скола</li>
+					<li>Заливка полимера в полость скола или трещины. Полимер хорошо проникает в микротрещины и имеет идентичную степень преломления света, что и стекло</li>
+					<li>Обработка полимера ультрафиолетом, в результате чего полимер отвердевает</li>
+					<li>Полировка восстановленной поверхности стекла</li>
+				</ol>
+				<div id="beforeafterID" class="cols col-12">
+					<a class="bfl cols col-5" id="before1" onclick="beforeafter(0)">ДО РЕМОНТА</a>
+					<a class="bfl cols col-5" id="before2" onclick="beforeafter(1)">ПОСЛЕ РЕМОНТА</a>
+				</div>
+				</div>
+				<div id="contain1">
+					<img alt="before" id="afterrr"  src="site/img/posle.png" class="afterb4"/>
+					<img alt="before" id="beforrre" src="site/img/do.png" class="afterb4"/>
+				</div>
+			</div>
+		</div>
+		<div id="thirdDiv" class="row">
+		<h1 class="divHeader cols col-12" id="zapisHeader">Как проехать</h1>
+			<div id="zapis">
+				Необходимо заранее <a class="bfl" id="zapisbutton" onclick="gotoDiv(5)">записаться</a> на приём
+			</div>
+			<div id="contain2">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8b195222ba404b22de60441249b91dcfb680d877c9300ce59ff276b408c8e4b3&amp;width=971&amp;height=514&amp;lang=ru_RU&amp;scroll=true"></script>
+			</div>
+		</div>
+		<div id="fourthDiv" class="row">
+			<h1 class="divHeader" id="prices">Цены</h1>	
+			<div class="prices">
+			<div class="priceSquare">
+				<img src="site/img/skol.png">
+				<p>СКОЛ</p><br><br>
+				от <span>600&#8381;</span><br><br><br>
+				<a class="bfl" onclick="gotoDiv(5)">ПОДРОБНЕЕ</a>
+			</div>
+			<div class="priceSquare">
+				<img src="site/img/crack.png">
+				<p>ТРЕЩИНА</p><br><br>
+				<span>40&#8381;</span> за 1см<br><br><br>
+				<a class="bfl" onclick="gotoDiv(5)">ПОДРОБНЕЕ</a>
+			</div>
+			<div class="priceSquare">
+				<img src="site/img/spotlight.png">
+				<p>ВОССТАНОВЛЕНИЕ ПРОЗРАЧНОСТИ ФАРЫ</p><br>
+				от <span>1500&#8381;</span><br><br><br>
+				<a class="bfl" onclick="gotoDiv(5)">ПОДРОБНЕЕ</a>
+			</div>
+			</div>
+		</div>
+		<div id="fifthDiv" class="row">
+			<h1 class="divHeader">Контакты и обратная связь</h1>
+			<div class="contact-form">
+				<div class="contact_left">
+					<form method="post" name="application" action="site/php/contact.php">
+						<label for="author">Имя:</label><br>
+						<input type="text" value="Введите ваше имя" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Введите ваше имя';}" name="author">
+						<label for="phone">Телефон:</label><br>
+						<input type="text" value="Введите номер вашего телефона" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Введите номер вашего телефона';}" name="phone" id="qwe123" />
+						<label for="datetime">Удобная дата:</label><br>
+						<input type="text" value="Введите дату и время" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Введите дату и время';}" name="datetime" id="qwe123" />
+						<label for="message">Сообщение:</label><br>
+						<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Опишите поломку';}" name="message">Опишите поломку</textarea>
+						<br><input name="submit123" type="button"  id="submit" value="Отправить" form="application" onclick="submitLayout()">
+					</form>
+				</div>
+		      	<div class="contact_right">
+		     		<label>Адрес</label>
+		      		<p class="contact_address">Россия, Московская область, Химки, квартал Старбеево, улица Лизы Чайкиной, 22<br><b>Необходимо заранее записаться на приём</b></p>
+		      		<label>Контакты</label>
+		      		<p class="contact_address">+7 977 269 92 42 — Дмитрий</p>
+		      		<div id="contact_network">
+		      			<img src="site/img/if_phone_1645999.png" class="network">
+		      			<img src="site/img/telegram.png" class="network">
+		      			<img src="site/img/viber.png" class="network">
+		      			<img src="site/img/whatsapp.png" class="network">
+		      		</div>
+		      	</div>
+		    </div>
+		    
+		</div>
+	</div>
+</body>
+</html>
