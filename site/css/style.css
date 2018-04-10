@@ -505,7 +505,7 @@ div{
 }
 @media screen and (max-height: 800px){
 	body{
-		font-size: 12px;
+		font-size: 13px;
 	}
 	.wrapper{
 		height: 570%;
